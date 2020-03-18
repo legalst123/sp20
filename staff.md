@@ -5,9 +5,7 @@ nav_order: 4
 description: A listing of all the course staff members.
 ---
 
-# Staff
-
-Staff information is stored in the `_staffers` directory and rendered according to the layout file, `_layouts/staffer.html`.
+Note: Consult the calendar for the most up-to-date office hours.
 
 ## Instructors
 

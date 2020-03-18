@@ -1,18 +1,10 @@
 ---
 layout: page
-title: Course Calendar
-nav_order: 2
-description: An embedded Google Calendar displaying the weekly event schedule.
+title: Calendar
+nav_order: 3
+description: The weekly event schedule.
 ---
 
-# Course Calendar
+# Weekly Schedule
 
-Course materials are defined in the `_modules` directory. Each module is rendered here according to their filename.
-
-Modules are rendered according to the layout file defined in `_layouts/module.html`. Edit the HTML to modify the layout.
-
-## Modules
-
-{% for module in site.modules %}
-{{ module }}
-{% endfor %}
+{% include schedule.html data=site.data.schedule.weekly interval=30 row_height=40 min_day_width=130 %}

@@ -8,52 +8,33 @@ schedule:
     events:
       - name: Lecture
         class: lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        class: section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        class: office-hours
-        start: 12:30 PM
+        start: 12:00 PM
         end: 2:00 PM
-        location: 271 Soda
   - name: Tuesday
+    events:
+      - name: Violet's Office Hour
+        class: office-hours
+        start: 1:00 PM
+        end: 3:00 PM
   - name: Wednesday
     events:
       - name: Lecture
         class: lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        class: section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
-        class: office-hours
-        start: 12:30 PM
+        start: 12:00 PM
         end: 2:00 PM
-        location: 271 Soda
+      - name: Ilya's Office Hour
+        class: office-hours
+        start: 10:00 AM
+        end: 12:00 PM
   - name: Thursday
+    events:
+      - name: Wilson's Office Hour
+        class: office-hours
+        start: 10:00 AM
+        end: 12:00 PM
   - name: Friday
     events:
-      - name: Lecture
-        class: lecture
-        start: 9:30 AM
-        end: 10:30 AM
-        location: 150 Wheeler
-      - name: Section
-        class: section
-        start: 11:30 AM
-        end: 12:30 PM
-        location: 310 Soda
-      - name: Office Hours
+      - name: Iland's Office Hour
         class: office-hours
-        start: 12:30 PM
-        end: 2:00 PM
-        location: 271 Soda
+        start: 2:00 PM
+        end: 4:00 PM
