@@ -18,7 +18,7 @@ description: Data, Prediction, and Law
 author: Violet Yao
 email: violetyao@berkeley.edu
 baseurl: '/legalst123' # the subpath of your site, e.g. /blog
-url: 'https://kevinl.info' # the base hostname & protocol for your site, e.g. http://example.com
+url: 'https://violetyao.github.io/' # the base hostname & protocol for your site, e.g. http://example.com
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md"]
 
 # Theme settings
