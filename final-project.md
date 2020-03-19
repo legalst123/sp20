@@ -24,11 +24,6 @@ If you need more information,
 - Basic Syntax: https://www.markdownguide.org/basic-syntax/
 - Extended Syntax: https://www.markdownguide.org/extended-syntax/
 
-#### Example
-
-sample-project
-- index.md
-- images/
 
 
 ### More complicated templates
