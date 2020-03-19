@@ -12,10 +12,6 @@ description: >-
 {: .fs-6 .text-grey-dk-000 }
 
 
-{% assign instructors = site.staffers | where: 'role', 'Instructor' %}
-{% for staffer in instructors %}
-{{ staffer }}
-{% endfor %}
 
 
 ### Description

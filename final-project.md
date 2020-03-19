@@ -25,15 +25,14 @@ If you need more information,
 - Extended Syntax: https://www.markdownguide.org/extended-syntax/
 
 
-
 ### More complicated templates
 - https://github.com/yenchiah/project-website-template
 - https://github.com/gcushen/hugo-academic
 
-### Some project websites your may find interesting
+### Some project websites your might find interesting
 - markdown: https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/
 - hugo: https://elated-murdock-6fdb65.netlify.com/
 
-### Submission Guideline
+## Submission Guideline
 
 Coming soon!
