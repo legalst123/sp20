@@ -21,19 +21,20 @@ Some quick references:
 |Image| `![alt text](image.jpg)`|
 
 If you need more information,
-- Basic Syntax: https://www.markdownguide.org/basic-syntax/
-- Extended Syntax: https://www.markdownguide.org/extended-syntax/
-
-
+- [Basic Syntax](https://www.markdownguide.org/basic-syntax/)
+- [Extended Syntax](https://www.markdownguide.org/extended-syntax/)
 
 ### More complicated templates
-- https://github.com/yenchiah/project-website-template
-- https://github.com/gcushen/hugo-academic
+- [HTML/CSS/JS](https://github.com/yenchiah/project-website-template)
+- [Hugo Academic](https://github.com/gcushen/hugo-academic)
 
-### Some project websites your may find interesting
-- markdown: https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/
-- hugo: https://elated-murdock-6fdb65.netlify.com/
+### Some project websites your might find interesting
+- [A markdown one](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/)
+- [A hugo academic one](https://elated-murdock-6fdb65.netlify.com/)
 
-### Submission Guideline
+# Submissions
 
-Coming soon!
+
+[A sample Project](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/)            |  [Another sample project](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/)
+:-------------------------:|:-------------------------:
+![](../assets/images/propublica.jpg)  |  ![](../assets/images/propublica.jpg)
