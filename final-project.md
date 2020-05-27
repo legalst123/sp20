@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Final Project
+title: Final Project Resources
 nav_order: 5
 description:
 ---
@@ -33,4 +33,3 @@ If you need more information,
 - [A hugo academic one](https://elated-murdock-6fdb65.netlify.com/)
 
 # Submissions
-

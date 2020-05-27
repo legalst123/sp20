@@ -1,0 +1,92 @@
+---
+layout: page
+title: Group 02
+nav_order: 7
+description:
+---
+
+## Differences In The Discussion of Court Cases Across Regional Boundaries
+
+### Group members: Caroline Brown, Noah Palm, Jenny Rubio
+
+## Introduction
+
+Our goal: To compare court cases across regional boundaries. We wanted to see whether a model trained on data from a Northern state could be useful in classifying court cases in a Southern State.
+
+But first, we had to explore our data to see how it could be analyzed, and which new features could be created from the text.
+
+To do so, we centered our analysis on side by side comparison of 2 states with similar legal systems but different political affiliations-- one is more conservative (Alabama) and the other is more liberal (Massachusetts). This was to help prep our understanding of the court cases as a whole so we could eventually extrapolate to a cross-regional predictive model. These two states, similar but different, as Alabama and Massachusetts are, revealed to us how we could thereafter expand the comparison and its uses.
+
+The wordclouds below depict the most common words used in court cases between Alabama and Massachussetts respectively.
+
+![alt text](Alabama_Wordcloud.jpg)
+
+![alt text](wordcloud_Mass.jpg)
+
+Below are histograms depicting the word count across cases in Alabama and Massachusetts respectively.
+
+![alt text](word_count_a.jpg)
+
+![alt text](Word_count_m.jpg)
+
+### Overview
+We used XML text data from Massachusetts court cases from the Harvard Caselaw Access Project as training data in logistic regression models (and one linear regression model with cutoffs) to predict whether or not court cases in Alabama were criminal or not (1 or 0), Alabama cases being our validation set.
+If accuracy and recall levels were high enough, depending on the models we used (and we use several), we could then see what makes these two regions different, and what makes them similar.
+
+We first divided the Massachusetts cases into training and test sets, and determined the accuracy of our model on predicting the test data within Massachusetts, before using those models on Alabama data. We trained our logistic regression models with 3 different sets of features, one set using keywords related to criminality alone, another using polarity and Moral Foundations Theory alone, and the third used polarity, Moral Foundations Theory, length, and the keywords (all our features).The resulting accuracies allowed us to determine which features had the highest accuracy and recall in predicting whether or not a case was criminal or non-criminal. We also made one linear regression model using the keywords, the length, and the sentiment analysis to see if logistic regression was indeed appropriate (which it proved to be).
+
+
+#### Keyword Training
+We used the following words' presence (0 or 1) in each case as features because we believed that they would be especially helpful in deciding whether a case was criminal or not, and using these features that did not rely on Moral Foundations would give us a point for comparison to see whether or not these cases talked about crime in different ways (a attribute that moral foundations theory would have, but not the simple presence of these words):
+homicide, criminal, murder, manslaughter, robbery, rape, aggravated, assult, gang, violence, plantiff, claim, penalty, convict, benefit, injury, disability, sanction, divorce, negligent, property, award, fine, drug
+
+Below are the number of instances each keyword was used in both Alabama and Massachusetts cases.
+
+![alt text](compare.jpg)
+
+![alt text](compare1.jpg)
+
+#### Polarity and Moral Foundations Theory Training
+
+This model utilizes both polarity of court case text and moral foundations theory as features (without text) in order to predict whether or not cases are criminal or civil. Through the utilization of TextBlob tools in python, we are able to determine the polarity (sentiment) of the text as a whole. Through utilizing a moral foundations dictionary, we are able to categorize certain words in the text into 5 categories: 'authority/subversion','care/harm','fairness/cheating','loyalty/betrayal','sanctity/degradation'. Certain words in the text fall into these categories (i.e. 'safe' falls in the category of 'care/harm') and the frequencies of these words in the respective categories are used as features in our model.
+
+#### Polarity, Moral Foundations Theory, Length, and Keywords Training
+
+This model combines the prior two by utilizing the keywords, Moral Foundations Theory, and Polarity, and adds length of text as features.
+
+## Model Explanation
+Logistic regression made the most sense for this model, as we are predicting a binary outcome. The aforementioned linear model with a cutoff in our work was to demonstrate that we achieved higher accuracies using logistic regression models.
+
+TF-IDF, svm and naive bayes-nets - trained models yielded very low accuracy, so we opted to instead use Moral Foundations theory and sentiment analysis only, which could give us a better idea of the nature of discussions in court cases in both regions.
+
+After determining the accuracies and recalls of our logistic regression models using the Massachusetts training/test sets and the Alabama validation set, we were able to compare the two to determine if there is a difference in how criminal cases are discussed in the two different states. Similar accuracies/recalls would imply there is little discernable difference, while different accuracies would imply that they are discussed differently.
+
+We hand-labeled a sample of the cases on our own as criminal or non-criminal to prep for model fitting. We labeled 210 cases from Massachusetts and 100 from Alabama. 80% of the cases in Massachusetts were used as training data for the model, and 20% were used as a test set. Of course, 100% of the Alabama labeled cases were used as the validation set, since we were using this data exclusively to test for generalizability across region.
+
+## Keyword Model Results
+
+![alt text](words.jpg)
+
+## Polarity and Moral Foundations Theory Results
+
+![alt text](moral_polarities.jpg)
+
+## Polarity, Moral Foundations Theory, Length, and Keywords Results
+
+![alt text](moral+words.jpg)
+
+#### Conclusion
+
+The model using only keywords achieved .9286 accuracy on the massachusetts test data and .91 accuracy on the Alabama data. The model using just polarity and Moral Foundations achieved .6667 accuracy on the massachussets test data and .6200 on the Alabama data. The model using all of the features (keywords, polarity, Moral Foundations, and length) achieved .8810 accuracy on the Massachusetts test data and .6400 accuracy on the Alabama data.
+
+Keywords alone (the first model) achieve the best accuracy in both Massachusetts and Alabama, which we expected, since the key words would not vary much from region to region on what they imply about a case. Polarity and Moral Foundations appeared to have very little predictive power (second model) as the recall in both Massachusetts and Alabama are very low, with almost all cases predicted to be criminal. The comparable results at first led us to believe that there was no difference in how criminal cases are discussed between Alabama and Massachusetts. The third model, however provides a different insight.
+
+The third model (with both key words and moral foundations/sentiement) has a much higher accuracy in Massachusetts than in Alabama. In Alabama, however, we see that the model performs far poorer than in Massachusetts. There were only 2 predicted criminal cases among Alabama cases, and although they were both True Positives, the large number of False Negatives that were not present in the Mass training and test sets the two states apart. We know from the first model that if sentiment/Moral Foundation were not included the accuracy would be much higher. This implies that the Sentiment/Moral Foundations is significantly bringing down the model's accuracy specifically for Alabama. Thus, the sentiment and the moral foundations features do NOT generalize well across the North/South divide.
+
+The implications of this are either that Alabama and Massachusetts have very different court cases that go to trial or that the way cases are discussed in the court rooms in Alabama vs Massachusetts differs significantly.
+
+Possible gaps in our work could result from accidental mislabeling of criminal and civil court cases. Human error is always a cause for concern. We were also limited in the amount of court cases we were able to use to train our model in a limited amount of time. More instances in our training and test sets would have probably told us more about the divide between the two states.
+
+The goal of our model was to determine whether or not court cases are talked about differently between northern and southern states. As discussed above, our models showed that there is a difference in the discussion of cases, however we are unable to determine if this is due to a difference in the type of cases being discussed or how cases are discussed. Furthermore, in order to truly determine a difference between Northern and Southern states, we would have to rerun our models with data from more states in the regions to collect more sound results. Ultimately more work would have to be done and more data would have to be utilized to draw sound conclusions from our work, however the work we have done produces interesting results and can serve as a foundation that can be built off of.
+
+The fact that cases are discussed differently between different states has serious moral implications. If a case is talked about more or less harshly, it can influence the verdict determined by the jury, implying that the same case could have a different result in different states.
