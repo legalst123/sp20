@@ -4,7 +4,7 @@ title: Group 01
 nav_order: 6
 description:
 ---
-# Question: Can we build a model to predict someone's stance on gun control?**
+# Question: Can we build a model to predict someone's stance on gun control?
 
 By: Jacqueline Wood, Andrew Choi, Omar Gastelum
 
