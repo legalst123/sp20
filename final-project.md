@@ -34,7 +34,3 @@ If you need more information,
 
 # Submissions
 
-
-[A sample Project](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/)            |  [Another sample project](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/)
-:-------------------------:|:-------------------------:
-![](../assets/images/propublica.jpg)  |  ![](../assets/images/propublica.jpg)
