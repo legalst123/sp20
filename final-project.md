@@ -31,5 +31,3 @@ If you need more information,
 ### Some project websites your might find interesting
 - [A markdown one](https://inst.eecs.berkeley.edu/~cs194-26/sp20/upload/files/proj3/cs194-26-afs/)
 - [A hugo academic one](https://elated-murdock-6fdb65.netlify.com/)
-
-# Submissions
