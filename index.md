@@ -14,7 +14,12 @@ description: >-
 
 {% assign instructors = site.staffers | where: 'role', 'Instructor' %}
 {% for staffer in instructors %}
-{{ staffer }}
+<img class="staffer-image" src="./assets/images/marshall.jpg" alt="{{ page.name }}">
+
+Instructor: {{staffer.name }}
+
+Email: {{ staffer.email }} 
+
 {% endfor %}
 
 
